@@ -41,7 +41,7 @@ void removechars(char line[], int l) {
 	for (--l; l >= 0; --l) {
 		if (line[l] == '\n' && l > 0)
 			nline = 1;
-		else if (line[l] != '_' && in == 0) {
+		else if (line[l] != ' ' && line[l] != '\t' && in == 0) {
 			line[l + 1] = '\n';
 			line[l + 2] = '\0';
 			in = 1;
